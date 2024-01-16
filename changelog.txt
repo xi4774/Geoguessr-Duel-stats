@@ -1,0 +1,127 @@
+Version 0.07 - 16/01/24:
+
+- Added number of played rounds in Overall stats
+
+- Added Total guessing time in ranked duels in Overall stats - Suggestion by GabrielGeooo
+
+- Moved country/rounds map
+
+- Added a refresh for Opponents_ELO in the menu bar on top
+
+
+Version 0.06 - 15/01/24:
+
+Suggestion by Totoradio:
+  * Added a sheet "Opponents_ELO" containing the list of all opponents with their 
+    current nickname and ELO
+
+  * Added a column "Current ELO" in the table "Stats duels opponents" giving the 
+    current ELO of the opponent
+
+  * Added "update_opponent_ELO" in the Colab to fetch opponents current 
+    ELO and nickname at the end of each import
+
+- Update Banned stats to considered currently banned players (cf "Opponents_ELO")
+
+
+Version 0.05 - 14/01/24:
+
+- Optimisation with BYROW/ARRAYFORMULA
+
+- Added table "Stats decisive country" - Suggestion de Canthar
+
+
+Version 0.04 - 12/01/24:
+
+- Correction bug win/lose streak in the table "Overall stats" (when only win/lose in data) - 
+Bug seen by Orpheus
+
+- Added UPDATE sheet explaining the steps to update a new version
+
+- Added duel link in table "Record by opponent"
+
+- Update some formulas to enable more flexibility
+
+- Added date filtering
+
+
+Version 0.03 - 10/01/24: 
+
+- Correction bad range for graph - Bug seen by Heddicmi
+
+- Correction bug "No Guess" rounds in "Record by opponent" table
+
+- Correction date format - Bug seen by LeRemiii
+
+- Added Peak ELO to Overall stats
+
+- Added "Force refresh" for countries/rounds
+
+- Minor text modifications.
+
+
+Version 0.02 - 02/01/23: Text translations and revisions before bêta-testing.
+
+
+Version 0.01 - 21/12/23: Initialisation of the project based on former work.
+
+- README: Explanations of the doc, how it works, how to copy, contribute...
+
+- Changelog: To keep track on the evolution of the doc.
+
+- utils_pays: Country translation + continent management
+
+- Player_list: List of players for which data can be uploaded
+
+- Display_stats: Main part of the doc. 
+
+  Display duels stats:
+    * Graph ELO Evolution: Graph of your ELO evolution since the chosen date
+
+    * Stat duel opponents: Number of games, winrate and ELO variation for each opponent (ID).
+
+    * Some overall stats: Worst Losing/Best Winning streak, number of games vs banned
+players (when import occurred), ELO variation related to banned players, 
+Winrate vs banned players, Overall winrate
+
+    * Histogram opponent's ELO distribution: repartition of opponent's ELO. 
+For each bar, considered ELO are between the mean of the current value and the precedent 
+AND the current value and the next one (minus 1).
+Example : for 1000, opponent's ELO is between 950 and 1049.
+For 800 and 1600, considered ELOs are < 850 and > 1575.
+The red part represents lost games and the green one won games.
+
+    * Stats duel countries: Stats for each country you played. Number of rounds, winrate, 
+mean distance in the country, mean difference with your opponents, mean guess time.
+A map below the histogram represents your winrate by country. 
+
+    * Record by opponent: Each game you played against the selected opponent showing
+the decisive round, your best round and your worst.
+
+    * Stats by opponents nationality: Number of games, winrate and ELO difference for each
+opponent's nationality. The nationality the opponent had when playing.
+2 maps available: Winrate/country and ELO diff/country.
+
+- Data_duel: Where everything is computed.
+
+- Data_duel_[nickname]: Blank template for duel imports.
+
+- Data_duel_4zi77: Example of import based on 4zi77 datas. Datas are raw.
+
+- utils in Apps Script: Some functions to help computations or for graph ELO evolution rescale.
+
+English and French available.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
